@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
+
+
+body {
+    font-family: 'Jersey 20', Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    width: 375px;
+    height: 667px;
+    background: #d5e2ef;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.top-header {
+  font-family: 'Jersey 15', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.dodo-intro {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#dodo-image {
+    width: 120px;
+    height: 120px;
+}
+
+.speech-bubble {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 10px;
+  }
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.menu-btn {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.task-btn {
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.design-process{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Night Mode */
+
+body.night {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+body.night #app {
+    background: #333;
+}
+
+body.night .menu-btn, body.night .task-btn {
+    background: #444;
+    color: #fff;
+}
+
+body.night .speech-bubble {
+  background: #888888
+}

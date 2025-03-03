@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="top-header">
+                <h1 class="h1-dodo">Dodo</h1>
+                <div class="theme-toggle">
+                    <img src="sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
+                </div>
+            </div>
+            <div class="dodo-intro">
+                <img src="dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
+                <div class="speech-bubble">
+                    <p id="greeting">Good Morning!</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="categories">
+            <p class="topic">Which Guide do you <br> need today?</p>
+            <div class="button-container">
+                <div class="menu-btn" onclick="showTasks()">Task Scheduler</div>
+                <div class="menu-btn" onclick="showDesignProcess()">Design Process</div>
+            </div>
+        </section>
+
+        <section id="tasks-container" class="hidden">
+            <h2>Task Scheduler</h2>
+            <div class="task-grid">
+                <div class="task-btn">Study</div>
+                <div class="task-btn">Break</div>
+                <div class="task-btn">Take Medication</div>
+                <div class="task-btn">Gym</div>
+            </div>
+        </section>
+
+        <section id="design-process" class="hidden">
+            <h2>Design Process Guide</h2>
+            <div class="design-process">
+                <div class="task-btn">Reasearch</div>
+                <div class="task-btn">Prototyping</div>
+                <div class="task-btn">Design Finalising</div>
+                <br>
+            <p>Step by step Design Process <br> Just stay consistent!</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
