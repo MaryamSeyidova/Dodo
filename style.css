@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
 
-
 body {
     font-family: 'Jersey 20', Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -20,10 +19,13 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     padding: 15px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .top-header {
-  font-family: 'Jersey 15', Arial, sans-serif;
+    font-family: 'Jersey 15', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,30 +36,51 @@ body {
     cursor: pointer;
 }
 
+.left img, .right img {
+    width: 35px;  /* Adjust the size of arrows */
+    cursor: pointer;
+}
+
 .dodo-intro {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+   justify-content: flex
+}
+
+.greeting-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+#greeting {
+    font-size: 20px; 
+    font-family: 'Jersey 25', sans-serif;
+    color: #000;
 }
 
 #dodo-image {
-    width: 120px;
-    height: 120px;
+    width: 170px; 
+    height: 170px; 
+    margin-left: 20px;
 }
 
-.speech-bubble {
-    background: #fff;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-left: 10px;
-  }
-
+.topic {
+    font-size: 24px; 
+    font-family: 'Jersey 25', sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+}
 
 .button-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: grid;
     gap: 15px;
+    align-items: flex-start;
 }
 
 .menu-btn {
@@ -69,6 +92,8 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     font-family: 'Jersey 25', sans-serif;
+    width: 100%;
+    max-width: 300px;
 }
 
 .menu-btn:hover {
@@ -92,18 +117,22 @@ body {
     transition: all 0.3s ease;
 }
 
+.task-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
 .hidden {
     display: none;
 }
 
-.design-process{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.design-process {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 /* Night Mode */
-
 body.night {
     background-color: #1c1c1c;
     color: #fff;
@@ -119,5 +148,5 @@ body.night .menu-btn, body.night .task-btn {
 }
 
 body.night .speech-bubble {
-  background: #888888
+    background: #888888;
 }

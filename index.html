@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodo - Your Task Companion</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="app">
         <header>
             <div class="top-header">
+                <!-- Left Arrow for Back -->
+                <div class="left">
+                    <img src="backwards-black.svg" id="back" onclick="goBack()">
+                </div>
+
                 <h1 class="h1-dodo">Dodo</h1>
+
+                <!-- Right Arrow for Forward -->
+                <div class="right">
+                    <img src="forward-black.svg" id="forward" onclick="goForward()">
+                </div>
+
                 <div class="theme-toggle">
-                    <img src="sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
+                    <img src="Sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
                 </div>
             </div>
             <div class="dodo-intro">
-                <img src="dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
-                <div class="speech-bubble">
+                <div class="greeting-box">
                     <p id="greeting">Good Morning!</p>
                 </div>
+                <img src="dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
             </div>
         </header>
 
+        <!-- Categories Section -->
         <section id="categories">
             <p class="topic">Which Guide do you <br> need today?</p>
             <div class="button-container">
@@ -32,6 +43,7 @@
             </div>
         </section>
 
+        <!-- Task Scheduler Section -->
         <section id="tasks-container" class="hidden">
             <h2>Task Scheduler</h2>
             <div class="task-grid">
@@ -42,17 +54,18 @@
             </div>
         </section>
 
+        <!-- Design Process Section -->
         <section id="design-process" class="hidden">
             <h2>Design Process Guide</h2>
             <div class="design-process">
-                <div class="task-btn">Reasearch</div>
+                <div class="task-btn">Research</div>
                 <div class="task-btn">Prototyping</div>
-                <div class="task-btn">Design Finalising</div>
-                <br>
-            <p>Step by step Design Process <br> Just stay consistent!</p>
+                <div class="task-btn">Design Finalizing</div>
             </div>
+            <p>Step-by-step Design Process <br> Just stay consistent!</p>
         </section>
     </div>
-    
+
+    <script src="script.js" defer></script>
 </body>
 </html>
