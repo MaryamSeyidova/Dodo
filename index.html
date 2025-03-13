@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +8,77 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div id="app">
         <header>
             <div class="top-header">
+                <div class="info">
+                    <img src="info.svg" id="info" onclick="">
+                </div>
+
+                <!-- Left Arrow for Back -->
+                <div class="left">
+                    <img src="backwards-black.svg" id="back" onclick="goBack()">
+                </div>
+
                 <h1 class="h1-dodo">Dodo</h1>
+
+                <!-- Right Arrow for Forward -->
+                <div class="right">
+                    <img src="forward-black.svg" id="forward" onclick="goForward()">
+                </div>
+
                 <div class="theme-toggle">
-                    <img src="sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
+                    <img src="Sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
                 </div>
             </div>
             <div class="dodo-intro">
-                <img src="dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
-                <div class="speech-bubble">
+                <div class="greeting-box">
                     <p id="greeting">Good Morning!</p>
                 </div>
+                <img src="dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
             </div>
         </header>
 
+        <!-- Categories Section -->
         <section id="categories">
             <p class="topic">Which Guide do you <br> need today?</p>
             <div class="button-container">
-                <div class="menu-btn" onclick="showTasks()">Task Scheduler</div>
-                <div class="menu-btn" onclick="showDesignProcess()">Design Process</div>
+                <div class="menu-btn" onclick="showTasks()">Task Scheduler <img src="dodo-character/surprised.png"></div>
+                <div class="menu-btn" onclick="showDesignProcess()">Design Process <img src="dodo-character/side-eye.png"></div>
             </div>
         </section>
 
+        <!-- Task Scheduler Section -->
         <section id="tasks-container" class="hidden">
             <h2>Task Scheduler</h2>
             <div class="task-grid">
-                <div class="task-btn">Study</div>
-                <div class="task-btn">Break</div>
-                <div class="task-btn">Take Medication</div>
-                <div class="task-btn">Gym</div>
+                <div class="task-btn study">Study <img src="dodo-character/crying.png"></div>
+                <div class="task-btn break">Break <img src="dodo-character/cool.png"></div>
+                <div class="task-btn medication">Take Medication <br><br><img src="meds.svg"><img src="meds.svg"></div>
+                <div class="task-btn gym">Gym <img src="dodo-character/smile.png"></div>
             </div>
         </section>
 
+        <!-- Design Process Section -->
         <section id="design-process" class="hidden">
             <h2>Design Process Guide</h2>
             <div class="design-process">
-                <div class="task-btn">Reasearch</div>
+                <div class="task-btn">Research</div>
                 <div class="task-btn">Prototyping</div>
-                <div class="task-btn">Design Finalising</div>
-                <br>
-            <p>Step by step Design Process <br> Just stay consistent!</p>
+                <div class="task-btn">Design Finalizing</div>
             </div>
+            <p>Step-by-step Design Process <br> Just stay consistent!</p>
         </section>
+
+        <!-- Footer Section (bottom nav buttons) -->
+        <div class="footer" id="footer">
+            <img src="footer/home-black.svg" id="home-black" alt="home" onclick="goMainPage()">
+            <img src="footer/plus-black.svg" id="plus-black" alt="plus" onclick="goMainPage()">
+            <img src="footer/icon-black.svg" id="icon-black" alt="icon" onclick="goMainPage()">
+        </div>
     </div>
-    
 </body>
+
 </html>
