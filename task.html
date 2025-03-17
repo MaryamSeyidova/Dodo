@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="top-header">
+            <div class="info">
+                <img src="info.svg" id="info" onclick="">
+            </div>
+
+            <!-- Left Arrow for Back -->
+            <div class="left">
+                <img src="backwards-black.svg" id="back" onclick="goBack()">
+            </div>
+
+            <h1 class="h1-dodo">Dodo</h1>
+
+            <!-- Right Arrow for Forward -->
+            <div class="right">
+                <img src="forward-black.svg" id="forward" onclick="goForward()">
+            </div>
+
+            <div class="theme-toggle">
+                <img src="Sun.svg" id="theme-icon" alt="Toggle Theme" onclick="toggleNightMode()">
+            </div>
+        </div>
+
+        <!-- Task Details -->
+        <section class="task-details">
+            <h2 id="task-header"></h2>
+            <textarea id="task-notes" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNotes()">Save</button>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <img src="footer/home-black.svg" alt="home" onclick="goMainPage()">
+            <img src="footer/plus-black.svg" alt="plus" onclick="goMainPage()">
+            <img src="footer/icon-black.svg" alt="icon" onclick="goMainPage()">
+        </div>
+    </div>
+</body>
+
+</html>

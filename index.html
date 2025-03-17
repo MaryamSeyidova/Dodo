@@ -56,7 +56,7 @@
             <div class="task-grid">
                 <div class="task-btn study">Study <img src="dodo-character/crying.png"></div>
                 <div class="task-btn break">Break <img src="dodo-character/cool.png"></div>
-                <div class="task-btn medication">Take Medication <br><br><img src="meds.svg"><img src="meds.svg"></div>
+                <div class="task-btn medication">Take Medication <br><br><br><br><img src="meds.svg"></div>
                 <div class="task-btn gym">Gym <img src="dodo-character/smile.png"></div>
             </div>
         </section>
@@ -70,6 +70,14 @@
                 <div class="task-btn">Design Finalizing</div>
             </div>
             <p>Step-by-step Design Process <br> Just stay consistent!</p>
+        </section>
+
+        <!-- Task Details -->
+        <section class="task-details" class="hidden">
+            <h2 id="task-header">Study</h2>
+        
+            <textarea id="task-notes" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNotes()">Save</button>
         </section>
 
         <!-- Footer Section (bottom nav buttons) -->
