@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <div class="dodo-intro">
+            <div class="greeting-box">
+                <p id="greeting">Good Morning!</p>
+            </div>
+            <img src="../dodo-character/Dodo-ai/love/love2.png" id="dodo-image" alt="Dodo Character">
+        </div>
+
+        
+        <!-- Categories Section -->
+        <section id="categories">
+            <p class="topic">Which Guide do you <br> need today?</p>
+            <div class="button-container">
+                <div class="menu-btn" onclick="showTasks()">Task Scheduler</div>
+                <div class="menu-btn" onclick="showDesignProcess()">Design Process</div>
+            </div>
+        </section>
+
+        <!-- Task Scheduler Section -->
+        <section id="tasks-container" class="hidden">
+            <h2>Task Scheduler</h2>
+            <div class="task-grid">
+                <a href="study.html" class="task-btn">Study</a>
+                <a href="break.html" class="task-btn">Break</a>
+                <a href="medication.html" class="task-btn">Take Medication</a>
+                <a href="gym.html" class="task-btn">Gym</a>
+            </div>
+            
+        </section>
+
+        <!-- Design Process Section -->
+        <section id="design-process" class="hidden">
+            <h2>Design Process Guide</h2>
+            <div class="design-process">
+                <div class="task-btn">Research</div>
+                <div class="task-btn">Prototyping</div>
+                <div class="task-btn">Design Finalizing</div>
+            </div>
+            <p>Step-by-step Design Process <br> Just stay consistent!</p>
+        </section>
+    </div>
+    <script>
+        document.getElementById('header-container').innerHTML = fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="../script.js" defer></script>
+</body>
+</html>
